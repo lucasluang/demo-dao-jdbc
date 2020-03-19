@@ -4,6 +4,8 @@ import java.util.Date;
 
 import com.mysql.fabric.xmlrpc.base.Data;
 
+import model.dao.DaoFactory;
+import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
@@ -15,6 +17,8 @@ public class Program {
 		
 		Seller seller = new Seller(21, "Lucas", "lucasluang@gmail.com", 
 				new Date(), 3000.0, obj);
+		
+		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
 		System.out.println(seller);
 
